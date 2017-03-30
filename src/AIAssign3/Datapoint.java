@@ -38,7 +38,7 @@ public class Datapoint {
     }
 
     public boolean[] getFeatures(){
-        return features;
+        return features.clone();
     }
 
     public DataClass getDataClass(){
@@ -60,9 +60,9 @@ public class Datapoint {
 
     public enum DataClass {
         First(new int[] {80, 55, 45, 32, 48, 9, 43, 14, 73, 19, 2, 70, 46, 16, 59, 50, 76, 84, 48}),
-        Second(new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}),
-        Third(new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}),
-        Fourth(new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19});
+        Second(new int[] {35, 24, 7, 14, 80, 9, 99, 10, 32, 6, 5, 86, 2, 6, 63, 19, 79, 100, 92}),
+        Third(new int[] {27, 3, 50, 50, 64, 52, 7, 37, 54, 78, 28, 37, 89, 71, 74, 3, 23, 63, 13}),
+        Fourth(new int[] {59, 21, 81, 90, 30, 15, 60, 46, 12, 51, 34, 3, 63, 55, 18, 54, 34, 95, 9});
 
         private int[] probabilities;
 
