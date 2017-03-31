@@ -16,13 +16,14 @@ public class Classification {
 
     private Datapoint[] data;
     private double[] probabilityOfZeroClassOne, probabilityOfZeroClassTwo, probabilityOfZeroClassThree, probabilityOfZeroClassFour;
-    private int numberOfFeatures, testingGroup;
+    private int numberOfFeatures, testingGroup, numberPerGroup;
     private Random random;
 
     public Classification(Datapoint[] data){
         this.random = new Random();
         this.data = data;
         this.numberOfFeatures = data[0].getFeatures().length;
+        this.numberPerGroup = data.length/NFold;
         this.testingGroup = random.nextInt(NFold);
         this.probabilityOfZeroClassOne = new double[numberOfFeatures];
         this.probabilityOfZeroClassTwo = new double[numberOfFeatures];
@@ -32,7 +33,6 @@ public class Classification {
     }
 
     private void nFoldCrossValidation(){
-        int numberPerGroup = data.length/NFold;
         int classOneCount = 0, classTwoCount = 0, classThreeCount = 0, classFourCount = 0;
         Datapoint currDataPoint;
 
@@ -83,17 +83,22 @@ public class Classification {
     }
 
     // Calculates the entropy of all S based on test data
-    private double entropy(){
-        double positiveExamples = 0, negativeExamples = 0;
+    public double entropy(){
+        double positiveExamples = 0, negativeExamples;
 
-        for(int i = testingGroup*data.length/NFold; i < (testingGroup + 1)*data.length/NFold; i ++){
-
+        for(int i = testingGroup*numberPerGroup; i < (testingGroup + 1)*numberPerGroup; i ++){
+            if(data[i].getDataClass() == independentClassification(i))
+                positiveExamples ++;
         }
-        return 0;
+        negativeExamples = (numberPerGroup - positiveExamples) / numberPerGroup;
+        positiveExamples = positiveExamples / numberPerGroup;
+
+        return (-(positiveExamples) * ((Math.log10(positiveExamples))/(Math.log10(2)))
+                - (negativeExamples) *((Math.log10(negativeExamples))/(Math.log10(2))));
     }
 
     // Calculates the entropy based on a subset of S
-    private double entropy(int feature){
+    public double entropy(int feature){
         return 0;
     }
 

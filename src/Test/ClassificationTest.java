@@ -59,8 +59,13 @@ public class ClassificationTest {
 
     @Test
     public void testClassify(){
-        int index = 7999;
+        int index = 2501;
         System.out.println("Datapoint " + index + " is class: " + data[index].getDataClass());
         System.out.println("The system classified it as class: " + classification.independentClassification(index));
+    }
+
+    @Test
+    public void testEntropy(){
+        System.out.println("The entropy of the System is: " + classification.entropy());
     }
 }
