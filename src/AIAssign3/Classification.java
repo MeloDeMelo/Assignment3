@@ -2,8 +2,6 @@ package AIAssign3;
 
 import static AIAssign3.Datapoint.DataClass.*;
 import AIAssign3.Datapoint.DataClass;
-
-import java.nio.file.FileStore;
 import java.util.Random;
 
 
@@ -112,9 +110,9 @@ public class Classification {
         positiveExamples = positiveExamples / total;
 
         if((negativeExamples == 1) || (positiveExamples == 1))
-            return 1;
-        else if(negativeExamples == positiveExamples)
             return 0;
+        else if(negativeExamples == positiveExamples)
+            return 1;
         else
             return (-(positiveExamples) * ((Math.log10(positiveExamples))/(Math.log10(2))) - (negativeExamples) *((Math.log10(negativeExamples))/(Math.log10(2))));
     }
@@ -130,7 +128,7 @@ public class Classification {
                 sv0 ++;
         }
 
-        return (entropy - ((sv0/numberPerGroup)*entropy0 + ((numberPerGroup-sv0)/numberPerGroup)*entropy1));
+        return (entropy - (Math.abs(sv0/numberPerGroup)*entropy0 + (Math.abs(numberPerGroup-sv0)/numberPerGroup)*entropy1));
     }
 
     public DataClass independentClassification(int index){
@@ -150,16 +148,16 @@ public class Classification {
         }
         for(int i = 1; i < point.getFeatures().length; i ++){
             if(point.getFeatures()[i]){
-                prob1 = prob1 * probabilityOfZeroClassOne[0];
-                prob2 = prob2 * probabilityOfZeroClassTwo[0];
-                prob3 = prob3 * probabilityOfZeroClassThree[0];
-                prob4 = prob4 * probabilityOfZeroClassFour[0];
+                prob1 = prob1 * probabilityOfZeroClassOne[i];
+                prob2 = prob2 * probabilityOfZeroClassTwo[i];
+                prob3 = prob3 * probabilityOfZeroClassThree[i];
+                prob4 = prob4 * probabilityOfZeroClassFour[i];
             }
             else{
-                prob1 = (1 - probabilityOfZeroClassOne[0]);
-                prob2 = (1 - probabilityOfZeroClassTwo[0]);
-                prob3 = (1 - probabilityOfZeroClassThree[0]);
-                prob4 = (1 - probabilityOfZeroClassFour[0]);
+                prob1 = (1 - probabilityOfZeroClassOne[i]);
+                prob2 = (1 - probabilityOfZeroClassTwo[i]);
+                prob3 = (1 - probabilityOfZeroClassThree[i]);
+                prob4 = (1 - probabilityOfZeroClassFour[i]);
             }
         }
 
