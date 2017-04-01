@@ -98,8 +98,39 @@ public class Classification {
     }
 
     // Calculates the entropy based on a subset of S
-    public double entropy(int feature){
-        return 0;
+    public double entropy(int feature, boolean value){
+        double positiveExamples = 0, negativeExamples, total = 0;
+
+        for(int i = testingGroup*numberPerGroup; i < (testingGroup + 1)*numberPerGroup; i ++){
+            if(data[i].getFeatures()[feature] == value) {
+                if (data[i].getDataClass() == independentClassification(i))
+                    positiveExamples++;
+                total ++;
+            }
+        }
+        negativeExamples = (total - positiveExamples) / total;
+        positiveExamples = positiveExamples / total;
+
+        if((negativeExamples == 1) || (positiveExamples == 1))
+            return 1;
+        else if(negativeExamples == positiveExamples)
+            return 0;
+        else
+            return (-(positiveExamples) * ((Math.log10(positiveExamples))/(Math.log10(2))) - (negativeExamples) *((Math.log10(negativeExamples))/(Math.log10(2))));
+    }
+
+    public double gain(int feature){
+        double entropy = entropy();
+        double entropy0 = entropy(feature, false);
+        double entropy1 = entropy(feature, true);
+        double sv0 = 0;
+
+        for(int i = testingGroup*numberPerGroup; i < (testingGroup + 1)*numberPerGroup; i ++){
+            if(data[i].getFeatures()[feature] == false)
+                sv0 ++;
+        }
+
+        return (entropy - ((sv0/numberPerGroup)*entropy0 + ((numberPerGroup-sv0)/numberPerGroup)*entropy1));
     }
 
     public DataClass independentClassification(int index){

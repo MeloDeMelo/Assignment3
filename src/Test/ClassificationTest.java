@@ -22,7 +22,7 @@ public class ClassificationTest {
             }
         }
         classification = new Classification(data);
-        classification.setTestingGroup(2);
+        classification.setTestingGroup(1);
     }
 
     @Test
@@ -67,5 +67,13 @@ public class ClassificationTest {
     @Test
     public void testEntropy(){
         System.out.println("The entropy of the System is: " + classification.entropy());
+        System.out.println("The entropy of the sub system (feature 4 value 1) is " + classification.entropy(4, true));
+    }
+
+    @Test
+    public void testGain(){
+        for(int i = 0; i < 10; i ++) {
+            System.out.println("The gain for feature " + i + " is: " + classification.gain(i));
+        }
     }
 }
