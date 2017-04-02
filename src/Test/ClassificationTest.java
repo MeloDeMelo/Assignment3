@@ -58,4 +58,18 @@ public class ClassificationTest {
             System.out.println();
         }
     }
+
+    @Test
+    public void testDependencytree(){
+        for(Datapoint.DataClass dataClass : Datapoint.DataClass.values()){
+            int[] dependencies = classification.guessDependencyTree(dataClass);
+            System.out.print("The dependencies according to class " + dataClass + " are: ");
+            for(int i = 0; i < dependencies.length; i ++){
+                System.out.print(i + " depends on " + dependencies[i]);
+                if(i < 9)
+                    System.out.print(", ");
+            }
+            System.out.println();
+        }
+    }
 }

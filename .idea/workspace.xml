@@ -24,18 +24,18 @@
       <file leaf-file-name="Datapoint.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AIAssign3/Datapoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
+            <state relative-caret-position="1217">
               <caret line="61" column="27" lean-forward="false" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Classification.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Classification.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/AIAssign3/Classification.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="79" column="9" lean-forward="false" selection-start-line="79" selection-start-column="9" selection-end-line="79" selection-end-column="9" />
+            <state relative-caret-position="208">
+              <caret line="106" column="0" lean-forward="false" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -43,11 +43,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClassificationTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ClassificationTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Test/ClassificationTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="12" column="33" lean-forward="true" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+            <state relative-caret-position="120">
+              <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -84,8 +84,8 @@
         <option value="$PROJECT_DIR$/src/Datapoint.java" />
         <option value="$PROJECT_DIR$/src/Test/DataPointTest.java" />
         <option value="$PROJECT_DIR$/src/AIAssign3/Datapoint.java" />
-        <option value="$PROJECT_DIR$/src/AIAssign3/Classification.java" />
         <option value="$PROJECT_DIR$/src/Test/ClassificationTest.java" />
+        <option value="$PROJECT_DIR$/src/AIAssign3/Classification.java" />
       </list>
     </option>
   </component>
@@ -180,7 +180,7 @@
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
   </component>
-  <component name="RunManager" selected="JUnit.ClassificationTest.testClassify">
+  <component name="RunManager" selected="JUnit.ClassificationTest.testDependencytree">
     <configuration default="false" name="ClassificationTest.testClassify" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -194,32 +194,6 @@
       <option name="PACKAGE_NAME" value="Test" />
       <option name="MAIN_CLASS_NAME" value="Test.ClassificationTest" />
       <option name="METHOD_NAME" value="testClassify" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="ClassificationTest.testEntropy" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="Test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="Assign3" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="Test" />
-      <option name="MAIN_CLASS_NAME" value="Test.ClassificationTest" />
-      <option name="METHOD_NAME" value="testEntropy" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -298,6 +272,32 @@
       <option name="PACKAGE_NAME" value="Test" />
       <option name="MAIN_CLASS_NAME" value="Test.ClassificationTest" />
       <option name="METHOD_NAME" value="testCrossFoldValidation" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="ClassificationTest.testDependencytree" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Assign3" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="Test" />
+      <option name="MAIN_CLASS_NAME" value="Test.ClassificationTest" />
+      <option name="METHOD_NAME" value="testDependencytree" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -693,18 +693,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.ClassificationTest.testClassify" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.ClassificationTest.testEntropy" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.ClassificationTest.testGain" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.ClassificationTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.ClassificationTest.testCrossFoldValidation" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.ClassificationTest.testGain" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ClassificationTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.ClassificationTest.testCrossFoldValidation" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.ClassificationTest.testDependencytree" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.ClassificationTest.testClassify" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.ClassificationTest.testCrossFoldValidation" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.ClassificationTest.testGain" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.ClassificationTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.ClassificationTest.testEntropy" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.ClassificationTest.testDependencytree" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ClassificationTest.testClassify" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ClassificationTest.testCrossFoldValidation" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ClassificationTest.testGain" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.ClassificationTest" />
       </list>
     </recent_temporary>
   </component>
@@ -728,48 +728,48 @@
       <workItem from="1490990274717" duration="10105000" />
       <workItem from="1491067641369" duration="63000" />
       <workItem from="1491068004835" duration="3768000" />
-      <workItem from="1491157489177" duration="8433000" />
+      <workItem from="1491157489177" duration="16921000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ClassificationTest_testClassify - 2017.04.02 at 16h 51m 15s.xml">
-      <configuration name="ClassificationTest.testClassify" configurationId="JUnit" />
+    <history-entry file="ClassificationTest_testDependencytree - 2017.04.02 at 19h 17m 40s.xml">
+      <configuration name="ClassificationTest.testDependencytree" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ClassificationTest_testClassify - 2017.04.02 at 16h 51m 19s.xml">
-      <configuration name="ClassificationTest.testClassify" configurationId="JUnit" />
+    <history-entry file="ClassificationTest_testDependencytree - 2017.04.02 at 19h 18m 15s.xml">
+      <configuration name="ClassificationTest.testDependencytree" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ClassificationTest_testClassify - 2017.04.02 at 16h 52m 18s.xml">
-      <configuration name="ClassificationTest.testClassify" configurationId="JUnit" />
+    <history-entry file="ClassificationTest_testDependencytree - 2017.04.02 at 19h 18m 26s.xml">
+      <configuration name="ClassificationTest.testDependencytree" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ClassificationTest_testClassify - 2017.04.02 at 16h 53m 35s.xml">
-      <configuration name="ClassificationTest.testClassify" configurationId="JUnit" />
+    <history-entry file="ClassificationTest_testDependencytree - 2017.04.02 at 19h 19m 32s.xml">
+      <configuration name="ClassificationTest.testDependencytree" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ClassificationTest_testClassify - 2017.04.02 at 16h 53m 50s.xml">
-      <configuration name="ClassificationTest.testClassify" configurationId="JUnit" />
+    <history-entry file="ClassificationTest_testDependencytree - 2017.04.02 at 19h 22m 54s.xml">
+      <configuration name="ClassificationTest.testDependencytree" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ClassificationTest_testClassify - 2017.04.02 at 16h 53m 56s.xml">
-      <configuration name="ClassificationTest.testClassify" configurationId="JUnit" />
+    <history-entry file="ClassificationTest_testDependencytree - 2017.04.02 at 19h 26m 38s.xml">
+      <configuration name="ClassificationTest.testDependencytree" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ClassificationTest_testClassify - 2017.04.02 at 16h 53m 58s.xml">
-      <configuration name="ClassificationTest.testClassify" configurationId="JUnit" />
+    <history-entry file="ClassificationTest_testDependencytree - 2017.04.02 at 19h 26m 41s.xml">
+      <configuration name="ClassificationTest.testDependencytree" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ClassificationTest_testClassify - 2017.04.02 at 16h 54m 01s.xml">
-      <configuration name="ClassificationTest.testClassify" configurationId="JUnit" />
+    <history-entry file="ClassificationTest_testDependencytree - 2017.04.02 at 19h 28m 41s.xml">
+      <configuration name="ClassificationTest.testDependencytree" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ClassificationTest_testClassify - 2017.04.02 at 16h 54m 04s.xml">
-      <configuration name="ClassificationTest.testClassify" configurationId="JUnit" />
+    <history-entry file="ClassificationTest_testDependencytree - 2017.04.02 at 19h 32m 50s.xml">
+      <configuration name="ClassificationTest.testDependencytree" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ClassificationTest_testClassify - 2017.04.02 at 16h 54m 12s.xml">
-      <configuration name="ClassificationTest.testClassify" configurationId="JUnit" />
+    <history-entry file="ClassificationTest_testDependencytree - 2017.04.02 at 19h 33m 08s.xml">
+      <configuration name="ClassificationTest.testDependencytree" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33512000" />
+    <option name="totallyTimeSpent" value="42000000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -794,7 +794,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5726776" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.53333336" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -811,7 +811,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="15" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/AIAssign3/Classification.java</url>
+          <line>106</line>
+          <properties />
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="22" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1002,26 +1010,26 @@
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_25/src.zip!/java/lang/StringBuilder.java" />
     <entry file="file://$PROJECT_DIR$/src/AIAssign3/Datapoint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
+        <state relative-caret-position="1217">
           <caret line="61" column="27" lean-forward="false" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AIAssign3/Classification.java">
+    <entry file="file://$PROJECT_DIR$/src/Test/ClassificationTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="79" column="9" lean-forward="false" selection-start-line="79" selection-start-column="9" selection-end-line="79" selection-end-column="9" />
+        <state relative-caret-position="120">
+          <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test/ClassificationTest.java">
+    <entry file="file://$PROJECT_DIR$/src/AIAssign3/Classification.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="12" column="33" lean-forward="true" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+        <state relative-caret-position="208">
+          <caret line="106" column="0" lean-forward="false" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

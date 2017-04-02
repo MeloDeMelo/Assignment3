@@ -15,10 +15,8 @@ public class Classification {
     private Datapoint[] data;
     private double[][][] probabilityOfZeroTraining;
     private int numberOfFeatures, numberPerGroup, numberOfClasses;
-    private Random random;
 
     public Classification(Datapoint[] data){
-        this.random = new Random();
         this.data = data;
         this.numberOfFeatures = data[0].getFeatures().length;
         this.numberPerGroup = data.length/NFold;
@@ -91,6 +89,68 @@ public class Classification {
 
     public double[] getPorabilitiesOfZero(int testingGroup, int classNum){
         return probabilityOfZeroTraining[testingGroup][classNum];
+    }
+
+    public int[] guessDependencyTree(DataClass dataClass){
+        double[][] weights = new double[numberOfFeatures-1][];
+        int[] dependencies = new int[numberOfFeatures];
+
+        for(int i = 0; i < numberOfFeatures-1; i ++)
+            weights[i] = new double[i + 1];
+
+        for(int i = 0; i < numberOfFeatures-1; i ++){
+            for(int k = 0; k < weights[i].length; k ++){
+                weights[i][k] = weight(i, k + 1, dataClass);
+            }
+        }
+
+        dependencies[0] = -1;
+
+        double[] max = new double[3];
+        for(int i = 1; i < numberOfFeatures; i ++){
+            max[0] = 0;
+            max[1] = i;
+            max[2] = weights[i][0];
+            for(int k = 1; k < i; k ++){
+                if(weights[k][i] > max[2]) {
+                    max[0] = k;
+                    max[1] = i;
+                    max[2] = weights[k][i];
+                }
+            }
+            dependencies[i] = (int)max[0];
+        }
+
+        return dependencies;
+    }
+
+    private double weight(int feature1, int feature2, DataClass dataClass){
+        double trueTrue = weightCalulation(feature1, feature2, true, true, dataClass);
+        double trueFalse = weightCalulation(feature1, feature2, true, false, dataClass);
+        double falseTrue = weightCalulation(feature1, feature2, false, true, dataClass);
+        double falseFalse = weightCalulation(feature1, feature2, false, false, dataClass);
+        return (trueTrue + trueFalse + falseFalse + falseTrue);
+    }
+
+    private double weightCalulation(int feature1, int feature2, boolean feature1Value, boolean feature2Value, DataClass dataClass){
+        int feature1Count = 0, feature2Count = 0, feature1And2Count = 0;
+        double numOfData = data.length;
+        for(int i = 0; i < numOfData; i ++){
+            if(data[i].getDataClass() == dataClass) {
+                if (data[i].getFeatures()[feature1] == feature1Value)
+                    feature1Count++;
+                if (data[i].getFeatures()[feature2] == feature2Value)
+                    feature2Count++;
+                if ((data[i].getFeatures()[feature1] == feature1Value) && (data[i].getFeatures()[feature2] == feature2Value))
+                    feature1And2Count++;
+            }
+        }
+        double vrBoth = feature1And2Count/numOfData;
+        double vr1 = feature1Count/numOfData;
+        double vr2 = feature2Count/numOfData;
+        if ((vrBoth == 0) || (vr1 == 0) || (vr2 == 0))
+            System.out.println("thing");
+        return(vrBoth * Math.log(vrBoth/(vr1 * vr2)));
     }
 
     /*// Calculates the entropy of all S based on test data
