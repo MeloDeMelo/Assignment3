@@ -65,7 +65,7 @@ public class ClassificationTest {
             int[] dependencies = classification.guessDependencyTree(dataClass);
             System.out.print("The dependencies according to class " + dataClass + " are: ");
             for(int i = 0; i < dependencies.length; i ++){
-                System.out.print(i + " depends on " + dependencies[i]);
+                System.out.print(dependencies[i]);
                 if(i < 9)
                     System.out.print(", ");
             }

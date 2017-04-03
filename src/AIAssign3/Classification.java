@@ -100,25 +100,24 @@ public class Classification {
 
         for(int i = 0; i < numberOfFeatures-1; i ++){
             for(int k = 0; k < weights[i].length; k ++){
-                weights[i][k] = weight(i, k + 1, dataClass);
+                weights[i][k] = weight(k, weights[i].length, dataClass);
             }
         }
 
         dependencies[0] = -1;
 
-        double[] max = new double[3];
-        for(int i = 1; i < numberOfFeatures; i ++){
-            max[0] = 0;
-            max[1] = i;
-            max[2] = weights[i][0];
-            for(int k = 1; k < i; k ++){
-                if(weights[k][i] > max[2]) {
-                    max[0] = k;
-                    max[1] = i;
-                    max[2] = weights[k][i];
+        double maxValue;
+        double maxIndex;
+        for(int i = 0; i < numberOfFeatures-1; i ++){
+            maxIndex = 0;
+            maxValue = weights[i][0];
+            for(int k = 1; k < weights[i].length; k ++){
+                if(weights[i][k] > maxValue) {
+                    maxIndex = k;
+                    maxValue = weights[i][k];
                 }
             }
-            dependencies[i] = (int)max[0];
+            dependencies[i+1] = (int)maxIndex;
         }
 
         return dependencies;
@@ -148,8 +147,8 @@ public class Classification {
         double vrBoth = feature1And2Count/numOfData;
         double vr1 = feature1Count/numOfData;
         double vr2 = feature2Count/numOfData;
-        if ((vrBoth == 0) || (vr1 == 0) || (vr2 == 0))
-            System.out.println("thing");
+        if ((vr1 == 0) || (vr2 == 0))
+            return 0;
         return(vrBoth * Math.log(vrBoth/(vr1 * vr2)));
     }
 
