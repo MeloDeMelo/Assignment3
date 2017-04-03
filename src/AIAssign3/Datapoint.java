@@ -58,6 +58,10 @@ public class Datapoint {
         return result;
     }
 
+    public int[] getDependencies(){
+        return dependencies;
+    }
+
     public enum DataClass {
         First(new int[] {80, 55, 45, 32, 48, 9, 43, 14, 73, 19, 2, 70, 46, 16, 59, 50, 76, 84, 48}, "1"),
         Second(new int[] {35, 24, 7, 14, 80, 9, 99, 10, 32, 6, 5, 86, 2, 6, 63, 19, 79, 100, 92}, "2"),

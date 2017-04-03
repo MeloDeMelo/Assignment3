@@ -15,14 +15,17 @@ public class Classification {
     private Datapoint[] data;
     private double[][][] probabilityOfZeroTraining;
     private int numberOfFeatures, numberPerGroup, numberOfClasses;
+    private int[] dependencies;
 
     public Classification(Datapoint[] data){
         this.data = data;
         this.numberOfFeatures = data[0].getFeatures().length;
         this.numberPerGroup = data.length/NFold;
         this.numberOfClasses = DataClass.values().length;
+        this.dependencies = new int[numberOfFeatures];
         probabilityOfZeroTraining = new double[NFold][numberOfClasses][numberOfFeatures];
         trainingProbabilitiesInit();
+        determineDependencyTree();
     }
 
     private void trainingProbabilitiesInit(){
@@ -123,6 +126,30 @@ public class Classification {
         return dependencies;
     }
 
+    public void determineDependencyTree(){
+        int[][] dependencyTrees = new int[numberOfClasses][];
+        double max = 0;
+        int index = 0;
+        for(int i = 0; i < numberOfClasses; i ++){
+            dependencyTrees[i] = guessDependencyTree(DataClass.values()[i]);
+            if(max < determineAccuracy(dependencyTrees[i])){
+                max = determineAccuracy(dependencyTrees[i]);
+                index = i;
+            }
+        }
+
+        dependencies = dependencyTrees[index];
+    }
+
+    private double determineAccuracy(int[] dependencies){
+        int count = 0;
+        for(int i = 0; i < numberOfFeatures; i ++){
+            if(dependencies[i] == data[0].getDependencies()[i])
+                count ++;
+        }
+        return count/numberOfFeatures;
+    }
+
     private double weight(int feature1, int feature2, DataClass dataClass){
         double trueTrue = weightCalulation(feature1, feature2, true, true, dataClass);
         double trueFalse = weightCalulation(feature1, feature2, true, false, dataClass);
@@ -150,6 +177,10 @@ public class Classification {
         if ((vr1 == 0) || (vr2 == 0))
             return 0;
         return(vrBoth * Math.log(vrBoth/(vr1 * vr2)));
+    }
+
+    public int[] guessDependencies(){
+        return dependencies;
     }
 
     /*// Calculates the entropy of all S based on test data

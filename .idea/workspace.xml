@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e2ae9bb-76b2-4d56-aeb0-77da6527ae51" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AIAssign3/Classification.java" afterPath="$PROJECT_DIR$/src/AIAssign3/Classification.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AIAssign3/Datapoint.java" afterPath="$PROJECT_DIR$/src/AIAssign3/Datapoint.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Test/ClassificationTest.java" afterPath="$PROJECT_DIR$/src/Test/ClassificationTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -30,9 +32,12 @@
       <file leaf-file-name="Datapoint.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AIAssign3/Datapoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="969">
-              <caret line="61" column="27" lean-forward="false" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="27" />
-              <folding />
+            <state relative-caret-position="518">
+              <caret line="61" column="28" lean-forward="false" selection-start-line="61" selection-start-column="28" selection-end-line="61" selection-end-column="28" />
+              <folding>
+                <element signature="e#1455#1456#0" expanded="true" />
+                <element signature="e#1490#1491#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -40,10 +45,12 @@
       <file leaf-file-name="Classification.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/AIAssign3/Classification.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
-              <caret line="105" column="0" lean-forward="true" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+            <state relative-caret-position="2890">
+              <caret line="182" column="28" lean-forward="false" selection-start-line="182" selection-start-column="28" selection-end-line="182" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#6851#6852#0" expanded="true" />
+                <element signature="e#6886#6887#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -52,8 +59,8 @@
       <file leaf-file-name="ClassificationTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Test/ClassificationTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="654">
-              <caret line="67" column="33" lean-forward="false" selection-start-line="67" selection-start-column="33" selection-end-line="67" selection-end-column="33" />
+            <state relative-caret-position="1207">
+              <caret line="76" column="63" lean-forward="false" selection-start-line="76" selection-start-column="63" selection-end-line="76" selection-end-column="63" />
               <folding />
             </state>
           </provider>
@@ -88,8 +95,8 @@
         <option value="$PROJECT_DIR$/src/Datapoint.java" />
         <option value="$PROJECT_DIR$/src/Test/DataPointTest.java" />
         <option value="$PROJECT_DIR$/src/AIAssign3/Datapoint.java" />
-        <option value="$PROJECT_DIR$/src/Test/ClassificationTest.java" />
         <option value="$PROJECT_DIR$/src/AIAssign3/Classification.java" />
+        <option value="$PROJECT_DIR$/src/Test/ClassificationTest.java" />
       </list>
     </option>
   </component>
@@ -121,9 +128,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -174,6 +178,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -733,17 +740,12 @@
       <workItem from="1491067641369" duration="63000" />
       <workItem from="1491068004835" duration="3768000" />
       <workItem from="1491157489177" duration="16921000" />
-      <workItem from="1491176848814" duration="2576000" />
+      <workItem from="1491176848814" duration="2629000" />
+      <workItem from="1491189964525" duration="923000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ClassificationTest_testDependencytree - 2017.04.02 at 20h 21m 42s.xml">
-      <configuration name="ClassificationTest.testDependencytree" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ClassificationTest_testDependencytree - 2017.04.02 at 20h 24m 09s.xml">
-      <configuration name="ClassificationTest.testDependencytree" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ClassificationTest_testDependencytree - 2017.04.02 at 20h 24m 59s.xml">
       <configuration name="ClassificationTest.testDependencytree" configurationId="JUnit" />
     </history-entry>
@@ -768,9 +770,15 @@
     <history-entry file="ClassificationTest_testDependencytree - 2017.04.02 at 20h 27m 58s.xml">
       <configuration name="ClassificationTest.testDependencytree" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ClassificationTest_testDependencytree - 2017.04.02 at 23h 40m 00s.xml">
+      <configuration name="ClassificationTest.testDependencytree" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ClassificationTest_testDependencytree - 2017.04.02 at 23h 41m 13s.xml">
+      <configuration name="ClassificationTest.testDependencytree" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44576000" />
+    <option name="totallyTimeSpent" value="45552000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -787,7 +795,6 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6945032" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -805,6 +812,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -827,9 +835,12 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/AIAssign3/Datapoint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1037">
+        <state relative-caret-position="969">
           <caret line="61" column="27" lean-forward="false" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="27" />
-          <folding />
+          <folding>
+            <element signature="e#1455#1456#0" expanded="true" />
+            <element signature="e#1490#1491#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -839,6 +850,39 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#6851#6852#0" expanded="true" />
+            <element signature="e#6886#6887#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Test/ClassificationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1054">
+          <caret line="67" column="33" lean-forward="false" selection-start-line="67" selection-start-column="33" selection-end-line="67" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AIAssign3/Datapoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1037">
+          <caret line="61" column="27" lean-forward="false" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="27" />
+          <folding>
+            <element signature="e#1455#1456#0" expanded="true" />
+            <element signature="e#1490#1491#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AIAssign3/Classification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#6851#6852#0" expanded="true" />
+            <element signature="e#6886#6887#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -855,7 +899,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1364">
           <caret line="62" column="95" lean-forward="false" selection-start-line="62" selection-start-column="93" selection-end-line="62" selection-end-column="95" />
-          <folding />
+          <folding>
+            <element signature="e#1455#1456#0" expanded="true" />
+            <element signature="e#1490#1491#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -865,6 +912,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#6851#6852#0" expanded="true" />
+            <element signature="e#6886#6887#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -881,7 +930,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1054">
           <caret line="62" column="95" lean-forward="false" selection-start-line="62" selection-start-column="93" selection-end-line="62" selection-end-column="95" />
-          <folding />
+          <folding>
+            <element signature="e#1455#1456#0" expanded="true" />
+            <element signature="e#1490#1491#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -891,6 +943,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#6851#6852#0" expanded="true" />
+            <element signature="e#6886#6887#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -917,7 +971,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1020">
           <caret line="62" column="95" lean-forward="false" selection-start-line="62" selection-start-column="93" selection-end-line="62" selection-end-column="95" />
-          <folding />
+          <folding>
+            <element signature="e#1455#1456#0" expanded="true" />
+            <element signature="e#1490#1491#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -927,6 +984,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#6851#6852#0" expanded="true" />
+            <element signature="e#6886#6887#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -953,7 +1012,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="858">
           <caret line="40" column="31" lean-forward="false" selection-start-line="40" selection-start-column="31" selection-end-line="40" selection-end-column="31" />
-          <folding />
+          <folding>
+            <element signature="e#1455#1456#0" expanded="true" />
+            <element signature="e#1490#1491#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -963,6 +1025,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#6851#6852#0" expanded="true" />
+            <element signature="e#6886#6887#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -981,7 +1045,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#1455#1456#0" expanded="true" />
+            <element signature="e#1490#1491#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -999,7 +1066,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#1455#1456#0" expanded="true" />
+            <element signature="e#1490#1491#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1027,26 +1097,31 @@
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_25/src.zip!/java/lang/StringBuilder.java" />
     <entry file="file://$PROJECT_DIR$/src/AIAssign3/Datapoint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="61" column="27" lean-forward="false" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="27" />
-          <folding />
+        <state relative-caret-position="518">
+          <caret line="61" column="28" lean-forward="false" selection-start-line="61" selection-start-column="28" selection-end-line="61" selection-end-column="28" />
+          <folding>
+            <element signature="e#1455#1456#0" expanded="true" />
+            <element signature="e#1490#1491#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Test/ClassificationTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="654">
-          <caret line="67" column="33" lean-forward="false" selection-start-line="67" selection-start-column="33" selection-end-line="67" selection-end-column="33" />
+        <state relative-caret-position="1207">
+          <caret line="76" column="63" lean-forward="false" selection-start-line="76" selection-start-column="63" selection-end-line="76" selection-end-column="63" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AIAssign3/Classification.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="105" column="0" lean-forward="true" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+        <state relative-caret-position="2890">
+          <caret line="182" column="28" lean-forward="false" selection-start-line="182" selection-start-column="28" selection-end-line="182" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#6851#6852#0" expanded="true" />
+            <element signature="e#6886#6887#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -71,5 +71,12 @@ public class ClassificationTest {
             }
             System.out.println();
         }
+
+        System.out.print("The system decided on: ");
+        for(int i = 0; i < classification.guessDependencies().length; i ++){
+            System.out.print(classification.guessDependencies()[i]);
+            if(i < 9)
+                System.out.print(", ");
+        }
     }
 }
