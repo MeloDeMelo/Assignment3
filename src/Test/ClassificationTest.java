@@ -12,6 +12,7 @@ import java.util.Random;
  */
 public class ClassificationTest {
 
+    final int NFold = 5;
     Classification classification;
     Datapoint[] data;
     Random random;
@@ -34,7 +35,7 @@ public class ClassificationTest {
 
     @Test
     public void testCrossFoldValidation(){
-        for(int k = 0; k < 5; k++) {
+        for(int k = 0; k < NFold; k++) {
             for (int i = 0; i < 4; i++) {
                 double[] probs = classification.getPorabilitiesOfZero(k, i);
                 for (int l = 0; l < 10; l ++) {
@@ -49,14 +50,30 @@ public class ClassificationTest {
 
     @Test
     public void testClassify(){
-        for(int i = 0; i < 5; i ++){
+        for(int i = 0; i < NFold; i ++){
             int index = i*1600 + random.nextInt(1600);
             System.out.println("Datapoint " + index + " is class: " + data[index].getDataClass());
-            System.out.println("Using TestingGroup " + i + " the system classified index " + index + " as: " + classification.independentClassification(index, i));
+            System.out.println("Using TestingGroup " + i + " the system independently classified index " + index + " as: " + classification.independentClassification(index, i));
             if(data[index].getDataClass() == classification.independentClassification(index, i))
                 System.out.println("It got it right!");
             System.out.println();
         }
+
+        System.out.println("The system using independent classification is on average " + classification.baysianIndependenet()* 100 + "% accurate");
+    }
+
+    @Test
+    public void testDependentClassify(){
+        for(int i = 0; i < NFold; i ++){
+            int index = i*1600 + random.nextInt(1600);
+            System.out.println("Datapoint " + index + " is class: " + data[index].getDataClass());
+            System.out.println("Using TestingGroup " + i + " the system dependently classified index " + index + " as: " + classification.dependenetClassification(index, i));
+            if(data[index].getDataClass() == classification.dependenetClassification(index, i))
+                System.out.println("It got it right!");
+            System.out.println();
+        }
+
+        System.out.println("The System using dependent classification is on average " + classification.baysianDependent() * 100 + "% accurate");
     }
 
     @Test
@@ -73,8 +90,8 @@ public class ClassificationTest {
         }
 
         System.out.print("The system decided on: ");
-        for(int i = 0; i < classification.guessDependencies().length; i ++){
-            System.out.print(classification.guessDependencies()[i]);
+        for(int i = 0; i < classification.getDependencies().length; i ++){
+            System.out.print(classification.getDependencies()[i]);
             if(i < 9)
                 System.out.print(", ");
         }

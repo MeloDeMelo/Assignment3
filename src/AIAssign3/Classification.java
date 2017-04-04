@@ -2,7 +2,6 @@ package AIAssign3;
 
 import static AIAssign3.Datapoint.DataClass.*;
 import AIAssign3.Datapoint.DataClass;
-import java.util.Random;
 
 
 /**
@@ -14,6 +13,7 @@ public class Classification {
 
     private Datapoint[] data;
     private double[][][] probabilityOfZeroTraining;
+    private double[][][] probabilityOfZeroTrainingDependent;
     private int numberOfFeatures, numberPerGroup, numberOfClasses;
     private int[] dependencies;
 
@@ -26,11 +26,125 @@ public class Classification {
         probabilityOfZeroTraining = new double[NFold][numberOfClasses][numberOfFeatures];
         trainingProbabilitiesInit();
         determineDependencyTree();
+        trainingProbabilitiesDependentInit();
+    }
+
+    private void trainingProbabilitiesDependentInit(){
+        int numberOfProbs = 0;
+        for(int i = 0; i < dependencies.length; i ++){
+            if(dependencies[i] != -1)
+                numberOfProbs += 2;
+            else
+                numberOfProbs ++;
+        }
+
+        probabilityOfZeroTrainingDependent = new double[NFold][numberOfClasses][numberOfProbs];
+        int[] classCount = new int[numberOfClasses];
+        int[][] dependencyOccurenceZero = new int[numberOfClasses][numberOfFeatures];
+        int classNumber;
+        Datapoint currDataPoint;
+
+        for(int testingGroup = 0; testingGroup < NFold; testingGroup++){
+            for(int i = 0; i < NFold; i ++){
+                if(i == testingGroup)
+                    continue;
+                for(int k = i * numberPerGroup; k < (i + 1) * numberPerGroup; k++) {
+                    currDataPoint = data[k];
+                    classNumber = determineClassNumber(k);
+                    for (int feature = 0; feature < numberOfFeatures; feature ++) {
+                        if(dependencies[feature] == -1){
+                            if (!currDataPoint.getFeatures()[feature])
+                                probabilityOfZeroTrainingDependent[testingGroup][classNumber][0]++;
+                        }
+                        else{
+                            if(currDataPoint.getFeatures()[dependencies[feature]]) {
+                                if (!currDataPoint.getFeatures()[feature])
+                                    probabilityOfZeroTrainingDependent[testingGroup][classNumber][(feature+1) * 2 - 3]++;
+                            }
+                            else {
+                                if (!currDataPoint.getFeatures()[feature]) {
+                                    probabilityOfZeroTrainingDependent[testingGroup][classNumber][(feature + 1) * 2 - 2]++;
+                                }
+                                dependencyOccurenceZero[classNumber][feature]++;
+                            }
+                        }
+                    }
+                    classCount[classNumber]++;
+                }
+            }
+            for(int feature = 0; feature < numberOfFeatures; feature++) {
+                for (int classNum = 0; classNum < numberOfClasses; classNum++) {
+                    if (dependencies[feature] == -1) {
+                        probabilityOfZeroTrainingDependent[testingGroup][classNum][0] = probabilityOfZeroTrainingDependent[testingGroup][classNum][0] / classCount[classNum];
+                    } else {
+                        probabilityOfZeroTrainingDependent[testingGroup][classNum][(feature + 1) * 2 - 3] = probabilityOfZeroTrainingDependent[testingGroup][classNum][(feature + 1) * 2 - 3] / (classCount[classNum] - dependencyOccurenceZero[classNum][feature]);
+                        probabilityOfZeroTrainingDependent[testingGroup][classNum][(feature + 1) * 2 - 2] = probabilityOfZeroTrainingDependent[testingGroup][classNum][(feature + 1) * 2 - 2] / dependencyOccurenceZero[classNum][feature];
+                    }
+                }
+            }
+            classCount = new int[numberOfClasses];
+            dependencyOccurenceZero = new int[numberOfClasses][numberOfFeatures];
+        }
+    }
+
+    public DataClass dependenetClassification(int index, int testingGroup){
+        Datapoint point= data[index];
+        double[] prob = new double[numberOfClasses];
+
+        for(int i = 0; i < numberOfClasses; i++)
+            prob[i] = 1;
+
+        for(int i = 0; i < numberOfClasses; i++){
+            for(int k = 0; k < numberOfFeatures; k ++) {
+                if(dependencies[k] == -1) {
+                    if (!point.getFeatures()[k])
+                        prob[i] = prob[i] * probabilityOfZeroTrainingDependent[testingGroup][i][k];
+                    else
+                        prob[i] = prob[i] * (1 - probabilityOfZeroTrainingDependent[testingGroup][i][k]);
+                }
+                else{
+                    if(point.getFeatures()[dependencies[k]]){
+                        if (!point.getFeatures()[k])
+                            prob[i] = prob[i] * probabilityOfZeroTrainingDependent[testingGroup][i][(k+1)*2-3];
+                        else
+                            prob[i] = prob[i] * (1 - probabilityOfZeroTrainingDependent[testingGroup][i][(k+1)*2-3]);
+                    }
+                    else{
+                        if (!point.getFeatures()[k])
+                            prob[i] = prob[i] * probabilityOfZeroTrainingDependent[testingGroup][i][(k+1)*2-2];
+                        else
+                            prob[i] = prob[i] * (1 - probabilityOfZeroTrainingDependent[testingGroup][i][(k+1)*2-2]);
+                    }
+                }
+            }
+        }
+
+        return pickMaxProb(prob);
+    }
+
+    private DataClass pickMaxProb(double[] prob){
+        if((prob[0] >= prob[1]) && (prob[0] >= prob[2]) && (prob[0] >= prob[3]))
+            return First;
+        else if((prob[1] >= prob[2]) && (prob[1] >= prob[3]))
+            return Second;
+        else if(prob[2] >= prob[3])
+            return Third;
+        else
+            return Fourth;
+    }
+
+    private int determineClassNumber(int index){
+        for (int classNum = 0; classNum < numberOfClasses; classNum++) {
+            if (data[index].getDataClass() == DataClass.values()[classNum]) {
+                return classNum;
+            }
+        }
+        return -1;
     }
 
     private void trainingProbabilitiesInit(){
         int[] classCount = new int[numberOfClasses];
-        int classNumber = 0;
+        int classNumber;
         Datapoint currDataPoint;
 
         for (int testingGroup = 0; testingGroup < NFold; testingGroup++) {
@@ -39,12 +153,7 @@ public class Classification {
                     continue;
                 for (int k = i * numberPerGroup; k < (i + 1) * numberPerGroup; k++) {
                     currDataPoint = data[k];
-                    for (int classNum = 0; classNum < numberOfClasses; classNum++) {
-                        if (currDataPoint.getDataClass() == DataClass.values()[classNum]) {
-                            classNumber = classNum;
-                            break;
-                        }
-                    }
+                    classNumber = determineClassNumber(k);
                     for (int j = 0; j < numberOfFeatures; j++) {
                         if (!currDataPoint.getFeatures()[j])
                             probabilityOfZeroTraining[testingGroup][classNumber][j]++;
@@ -73,25 +182,50 @@ public class Classification {
 
         for(int i = 0; i < numberOfClasses; i++){
             for(int k = 0; k < numberOfFeatures; k ++) {
-                if (point.getFeatures()[k])
+                if (!point.getFeatures()[k])
                     prob[i] = prob[i] * probabilityOfZeroTraining[testingGroup][i][k];
                 else
                     prob[i] = prob[i] * (1 - probabilityOfZeroTraining[testingGroup][i][k]);
             }
         }
 
-        if((prob[0] >= prob[1]) && (prob[0] >= prob[2]) && (prob[0] >= prob[3]))
-            return First;
-        else if((prob[1] >= prob[2]) && (prob[1] >= prob[3]))
-            return Second;
-        else if(prob[2] >= prob[3])
-            return Third;
-        else
-            return Fourth;
+        return pickMaxProb(prob);
     }
 
     public double[] getPorabilitiesOfZero(int testingGroup, int classNum){
         return probabilityOfZeroTraining[testingGroup][classNum];
+    }
+
+    public double baysianIndependenet(){
+        double accurary = 0;
+        double[] classAccuracy = new double[NFold];
+
+        for(int i = 0; i < NFold; i ++){
+            for(int k = i*numberPerGroup; k < (i+1)*numberPerGroup; k ++){
+                if(data[k].getDataClass() == independentClassification(k, i))
+                    classAccuracy[i] ++;
+            }
+            classAccuracy[i] = classAccuracy[i]/numberPerGroup;
+            accurary += classAccuracy[i];
+        }
+
+        return accurary/NFold;
+    }
+
+    public double baysianDependent(){
+        double accurary = 0;
+        double[] classAccuracy = new double[NFold];
+
+        for(int i = 0; i < NFold; i ++){
+            for(int k = i*numberPerGroup; k < (i+1)*numberPerGroup; k ++){
+                if(data[k].getDataClass() == dependenetClassification(k, i))
+                    classAccuracy[i] ++;
+            }
+            classAccuracy[i] = classAccuracy[i]/numberPerGroup;
+            accurary += classAccuracy[i];
+        }
+
+        return accurary/NFold;
     }
 
     public int[] guessDependencyTree(DataClass dataClass){
@@ -132,8 +266,8 @@ public class Classification {
         int index = 0;
         for(int i = 0; i < numberOfClasses; i ++){
             dependencyTrees[i] = guessDependencyTree(DataClass.values()[i]);
-            if(max < determineAccuracy(dependencyTrees[i])){
-                max = determineAccuracy(dependencyTrees[i]);
+            if(max < determineAccuracyOfTree(dependencyTrees[i])){
+                max = determineAccuracyOfTree(dependencyTrees[i]);
                 index = i;
             }
         }
@@ -141,7 +275,7 @@ public class Classification {
         dependencies = dependencyTrees[index];
     }
 
-    private double determineAccuracy(int[] dependencies){
+    private double determineAccuracyOfTree(int[] dependencies){
         int count = 0;
         for(int i = 0; i < numberOfFeatures; i ++){
             if(dependencies[i] == data[0].getDependencies()[i])
@@ -179,7 +313,7 @@ public class Classification {
         return(vrBoth * Math.log(vrBoth/(vr1 * vr2)));
     }
 
-    public int[] guessDependencies(){
+    public int[] getDependencies(){
         return dependencies;
     }
 
