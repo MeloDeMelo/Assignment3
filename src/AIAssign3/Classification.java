@@ -123,14 +123,15 @@ public class Classification {
     }
 
     private DataClass pickMaxProb(double[] prob){
-        if((prob[0] >= prob[1]) && (prob[0] >= prob[2]) && (prob[0] >= prob[3]))
-            return First;
-        else if((prob[1] >= prob[2]) && (prob[1] >= prob[3]))
-            return Second;
-        else if(prob[2] >= prob[3])
-            return Third;
-        else
-            return Fourth;
+        double max = prob[0];
+        int index = 0;
+        for(int i = 1; i < prob.length; i ++){
+            if(prob[i] > max){
+                max = prob[i];
+                index = i;
+            }
+        }
+        return DataClass.values()[index];
     }
 
     private int determineClassNumber(int index){
@@ -316,55 +317,4 @@ public class Classification {
     public int[] getDependencies(){
         return dependencies;
     }
-
-    /*// Calculates the entropy of all S based on test data
-    public double entropy(){
-        double positiveExamples = 0, negativeExamples;
-
-        for(int i = testingGroup*numberPerGroup; i < (testingGroup + 1)*numberPerGroup; i ++){
-            if(data[i].getDataClass() == independentClassification(i))
-                positiveExamples ++;
-        }
-        negativeExamples = (numberPerGroup - positiveExamples) / numberPerGroup;
-        positiveExamples = positiveExamples / numberPerGroup;
-
-        return (-(positiveExamples) * ((Math.log10(positiveExamples))/(Math.log10(2)))
-                - (negativeExamples) *((Math.log10(negativeExamples))/(Math.log10(2))));
-    }
-
-    // Calculates the entropy based on a subset of S
-    public double entropy(int feature, boolean value){
-        double positiveExamples = 0, negativeExamples, total = 0;
-
-        for(int i = testingGroup*numberPerGroup; i < (testingGroup + 1)*numberPerGroup; i ++){
-            if(data[i].getFeatures()[feature] == value) {
-                if (data[i].getDataClass() == independentClassification(i))
-                    positiveExamples++;
-                total ++;
-            }
-        }
-        negativeExamples = (total - positiveExamples) / total;
-        positiveExamples = positiveExamples / total;
-
-        if((negativeExamples == 1) || (positiveExamples == 1))
-            return 0;
-        else if(negativeExamples == positiveExamples)
-            return 1;
-        else
-            return (-(positiveExamples) * ((Math.log10(positiveExamples))/(Math.log10(2))) - (negativeExamples) *((Math.log10(negativeExamples))/(Math.log10(2))));
-    }
-
-    public double gain(int feature){
-        double entropy = entropy();
-        double entropy0 = entropy(feature, false);
-        double entropy1 = entropy(feature, true);
-        double sv0 = 0;
-
-        for(int i = testingGroup*numberPerGroup; i < (testingGroup + 1)*numberPerGroup; i ++){
-            if(data[i].getFeatures()[feature] == false)
-                sv0 ++;
-        }
-
-        return (entropy - (Math.abs(sv0/numberPerGroup)*entropy0 + (Math.abs(numberPerGroup-sv0)/numberPerGroup)*entropy1));
-    }*/
 }

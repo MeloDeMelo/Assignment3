@@ -49,7 +49,7 @@ public class ClassificationTest {
     }
 
     @Test
-    public void testClassify(){
+    public void testIndependentClassification(){
         for(int i = 0; i < NFold; i ++){
             int index = i*1600 + random.nextInt(1600);
             System.out.println("Datapoint " + index + " is class: " + data[index].getDataClass());
@@ -63,7 +63,7 @@ public class ClassificationTest {
     }
 
     @Test
-    public void testDependentClassify(){
+    public void testDependentClassification(){
         for(int i = 0; i < NFold; i ++){
             int index = i*1600 + random.nextInt(1600);
             System.out.println("Datapoint " + index + " is class: " + data[index].getDataClass());
