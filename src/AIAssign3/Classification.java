@@ -9,15 +9,15 @@ import AIAssign3.Datapoint.DataClass;
  */
 public class Classification {
 
-    private final int NFold = 5;
-
+    private int NFold;
     private Datapoint[] data;
     private double[][][] probabilityOfZeroTraining;
     private double[][][] probabilityOfZeroTrainingDependent;
     private int numberOfFeatures, numberPerGroup, numberOfClasses;
     private int[] dependencies;
 
-    public Classification(Datapoint[] data){
+    public Classification(Datapoint[] data, int NFold){
+        this.NFold = NFold;
         this.data = data;
         this.numberOfFeatures = data[0].getFeatures().length;
         this.numberPerGroup = data.length/NFold;
@@ -161,15 +161,15 @@ public class Classification {
                     }
                     classCount[classNumber]++;
                 }
-                for(int k = 0; k < numberOfFeatures; k ++) {
-                    for (int l = 0; l < classCount.length; l++) {
-                        probabilityOfZeroTraining[testingGroup][l][k] = probabilityOfZeroTraining[testingGroup][l][k] / classCount[l];
-                    }
+            }
+            for(int k = 0; k < numberOfFeatures; k ++) {
+                for (int l = 0; l < classCount.length; l++) {
+                    probabilityOfZeroTraining[testingGroup][l][k] = probabilityOfZeroTraining[testingGroup][l][k] / classCount[l];
                 }
+            }
 
-                for(int m = 0; m < classCount.length; m ++){
-                    classCount[m] = 0;
-                }
+            for(int m = 0; m < classCount.length; m ++){
+                classCount[m] = 0;
             }
         }
     }

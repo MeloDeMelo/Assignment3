@@ -7,16 +7,27 @@ import java.util.Random;
  */
 public class Datapoint {
 
-    private final int[] dependencies = new int[]{-1, 0, 0, 1, 1, 2, 2, 3, 6, 6};
-
+    private int[] dependencies;
     private boolean[] features;
     private DataClass dataClass;
     private Random random;
 
+    //for abstract Data
     public Datapoint(DataClass dataClass){
+        dependencies = new int[]{-1, 0, 0, 1, 1, 2, 2, 3, 6, 6};
         this.dataClass = dataClass;
         this.random = new Random();
         featuresInit();
+    }
+
+    //for wine data
+    public Datapoint(boolean[] features, int dataClass){
+        dependencies = new int[13];
+        for(int i = 0; i < 13; i ++){
+            dependencies[i] = -1;
+        }
+        this.features = features;
+        this.dataClass = DataClass.values()[dataClass];
     }
 
     private void featuresInit() {
@@ -47,7 +58,7 @@ public class Datapoint {
 
     public String toString(){
         String result = "DataPoint: ";
-        for(int i = 0; i < 10; i ++){
+        for(int i = 0; i < features.length; i ++){
             if (features[i])
                 result += "1";
             else
@@ -55,6 +66,7 @@ public class Datapoint {
             if (i < 9)
                 result += ", ";
         }
+        result += " Class: " + dataClass;
         return result;
     }
 

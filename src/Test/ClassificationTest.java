@@ -5,6 +5,10 @@ import AIAssign3.Datapoint;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.Random;
 
 /**
@@ -13,24 +17,64 @@ import java.util.Random;
 public class ClassificationTest {
 
     final int NFold = 5;
+    int numberPerGroup;
     Classification classification;
+    boolean wineTest = true;
+    BufferedReader br;
     Datapoint[] data;
     Random random;
 
     @Before
     public void setUp() throws Exception{
-        data = new Datapoint[8000];
-        int count = 0;
-        for(int k = 0; k < 5; k ++) {
-            for (int i = 0; i < 4; i++) {
-                for (int j = 0; j < 400; j++) {
-                    data[count] = new Datapoint(Datapoint.DataClass.values()[i]);
-                    count ++;
+        if(wineTest) {
+            data = new Datapoint[178];
+            try {
+                br = new BufferedReader(new FileReader("wine.csv"));
+                String line;
+                int index = 0;
+                boolean[] features;
+                while ((line = br.readLine()) != null) {
+                    String[] wine = line.split(",");
+                    features = determineWineFeatures(wine);
+                    data[index] = new Datapoint(features, Integer.parseInt(wine[0]) - 1);
+                    index++;
+                }
+            }catch (FileNotFoundException e){
+                System.out.println("File wasn't found");
+            }catch (IOException e){
+                System.out.println("IO exception");
+            }
+            br.close();
+        }
+        else{
+            data = new Datapoint[8000];
+            int count = 0;
+            for (int k = 0; k < 5; k++) {
+                for (int i = 0; i < 4; i++) {
+                    for (int j = 0; j < 400; j++) {
+                        data[count] = new Datapoint(Datapoint.DataClass.values()[i]);
+                        count++;
+                    }
                 }
             }
         }
-        classification = new Classification(data);
+        numberPerGroup = data.length/NFold;
+        classification = new Classification(data, NFold);
         random = new Random();
+    }
+
+    private boolean[] determineWineFeatures(String[] wine){
+        boolean[] features = new boolean[13];
+        double[] values = new double[13];
+        double[] averages = new double[] {13.00, 2.33, 2.36, 19.49, 99.74, 2.29, 2.03, 0.36, 1.59, 5.06, 0.96, 2.61, 746.89};
+        for(int i = 0; i < 13; i ++){
+            values[i] = Double.parseDouble(wine[i+1]);
+            if (values[i] >= averages[i])
+                features[i] = true;
+            else
+                features[i] = false;
+        }
+        return features;
     }
 
     @Test
@@ -38,7 +82,7 @@ public class ClassificationTest {
         for(int k = 0; k < NFold; k++) {
             for (int i = 0; i < 4; i++) {
                 double[] probs = classification.getPorabilitiesOfZero(k, i);
-                for (int l = 0; l < 10; l ++) {
+                for (int l = 0; l < data[0].getFeatures().length; l ++) {
                     System.out.println("Testing set: " + k + ", Class: " + i + ", Feature: " + l + ", prob: " + probs[l]);
                 }
                 System.out.println();
@@ -51,7 +95,7 @@ public class ClassificationTest {
     @Test
     public void testIndependentClassification(){
         for(int i = 0; i < NFold; i ++){
-            int index = i*1600 + random.nextInt(1600);
+            int index = i*numberPerGroup + random.nextInt(numberPerGroup);
             System.out.println("Datapoint " + index + " is class: " + data[index].getDataClass());
             System.out.println("Using TestingGroup " + i + " the system independently classified index " + index + " as: " + classification.independentClassification(index, i));
             if(data[index].getDataClass() == classification.independentClassification(index, i))
@@ -65,7 +109,7 @@ public class ClassificationTest {
     @Test
     public void testDependentClassification(){
         for(int i = 0; i < NFold; i ++){
-            int index = i*1600 + random.nextInt(1600);
+            int index = i*numberPerGroup + random.nextInt(numberPerGroup);
             System.out.println("Datapoint " + index + " is class: " + data[index].getDataClass());
             System.out.println("Using TestingGroup " + i + " the system dependently classified index " + index + " as: " + classification.dependenetClassification(index, i));
             if(data[index].getDataClass() == classification.dependenetClassification(index, i))

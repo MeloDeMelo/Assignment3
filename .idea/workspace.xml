@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3e2ae9bb-76b2-4d56-aeb0-77da6527ae51" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AIAssign3/Classification.java" afterPath="$PROJECT_DIR$/src/AIAssign3/Classification.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Test/ClassificationTest.java" afterPath="$PROJECT_DIR$/src/Test/ClassificationTest.java" />
-    </list>
+    <list default="true" id="3e2ae9bb-76b2-4d56-aeb0-77da6527ae51" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,35 +27,28 @@
       <file leaf-file-name="Datapoint.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AIAssign3/Datapoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-230">
-              <caret line="26" column="32" lean-forward="true" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
-              <folding>
-                <element signature="e#1455#1456#0" expanded="true" />
-                <element signature="e#1490#1491#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="177">
+              <caret line="60" column="42" lean-forward="false" selection-start-line="60" selection-start-column="42" selection-end-line="60" selection-end-column="42" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Classification.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Classification.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AIAssign3/Classification.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1456">
-              <caret line="318" column="5" lean-forward="false" selection-start-line="318" selection-start-column="5" selection-end-line="318" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#12876#12877#0" expanded="true" />
-                <element signature="e#12911#12912#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="121">
+              <caret line="166" column="0" lean-forward="false" selection-start-line="166" selection-start-column="0" selection-end-line="166" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClassificationTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ClassificationTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Test/ClassificationTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="65" column="21" lean-forward="false" selection-start-line="65" selection-start-column="21" selection-end-line="65" selection-end-column="21" />
+            <state relative-caret-position="550">
+              <caret line="34" column="35" lean-forward="true" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -93,9 +83,12 @@
         <option value="$PROJECT_DIR$/src/DataClass.java" />
         <option value="$PROJECT_DIR$/src/Datapoint.java" />
         <option value="$PROJECT_DIR$/src/Test/DataPointTest.java" />
+        <option value="$PROJECT_DIR$/src/AIAssign3/Sample.java" />
+        <option value="$PROJECT_DIR$/src/Test/WineClassificationTest.java" />
+        <option value="$PROJECT_DIR$/src/Test/AbstractClassificationTest.java" />
         <option value="$PROJECT_DIR$/src/AIAssign3/Datapoint.java" />
-        <option value="$PROJECT_DIR$/src/Test/ClassificationTest.java" />
         <option value="$PROJECT_DIR$/src/AIAssign3/Classification.java" />
+        <option value="$PROJECT_DIR$/src/Test/ClassificationTest.java" />
       </list>
     </option>
   </component>
@@ -106,10 +99,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -127,8 +120,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -180,6 +171,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -191,32 +184,6 @@
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
   </component>
   <component name="RunManager" selected="JUnit.ClassificationTest.testDependentClassification">
-    <configuration default="false" name="ClassificationTest.testClassify" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="Test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="Assign3" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="Test" />
-      <option name="MAIN_CLASS_NAME" value="Test.ClassificationTest" />
-      <option name="METHOD_NAME" value="testClassify" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
     <configuration default="false" name="ClassificationTest.testDependencytree" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -308,6 +275,32 @@
       <option name="PACKAGE_NAME" value="Test" />
       <option name="MAIN_CLASS_NAME" value="Test.ClassificationTest" />
       <option name="METHOD_NAME" value="testDependentClassification" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="ClassificationTest.testCrossFoldValidation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Assign3" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="Test" />
+      <option name="MAIN_CLASS_NAME" value="Test.ClassificationTest" />
+      <option name="METHOD_NAME" value="testCrossFoldValidation" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -702,19 +695,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.ClassificationTest.testClassify" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.ClassificationTest.testDependencytree" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.ClassificationTest.testDependentClassify" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.ClassificationTest.testIndependentClassification" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.ClassificationTest.testDependentClassification" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.ClassificationTest.testDependencytree" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.ClassificationTest.testDependentClassify" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ClassificationTest.testIndependentClassification" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.ClassificationTest.testDependentClassification" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.ClassificationTest.testCrossFoldValidation" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="JUnit.ClassificationTest.testDependentClassification" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.ClassificationTest.testIndependentClassification" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.ClassificationTest.testDependentClassify" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.ClassificationTest.testDependencytree" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.ClassificationTest.testClassify" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ClassificationTest.testDependencytree" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ClassificationTest.testIndependentClassification" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ClassificationTest.testCrossFoldValidation" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.ClassificationTest.testDependentClassify" />
       </list>
     </recent_temporary>
   </component>
@@ -742,46 +735,47 @@
       <workItem from="1491176848814" duration="2629000" />
       <workItem from="1491189964525" duration="1149000" />
       <workItem from="1491268476856" duration="8527000" />
+      <workItem from="1491313051528" duration="5394000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ClassificationTest_testDependentClassification - 2017.04.04 at 00h 24m 33s.xml">
+    <history-entry file="ClassificationTest_testCrossFoldValidation - 2017.04.04 at 10h 45m 07s.xml">
+      <configuration name="ClassificationTest.testCrossFoldValidation" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ClassificationTest_testCrossFoldValidation - 2017.04.04 at 10h 50m 07s.xml">
+      <configuration name="ClassificationTest.testCrossFoldValidation" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ClassificationTest_testCrossFoldValidation - 2017.04.04 at 10h 53m 59s.xml">
+      <configuration name="ClassificationTest.testCrossFoldValidation" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ClassificationTest_testCrossFoldValidation - 2017.04.04 at 10h 57m 26s.xml">
+      <configuration name="ClassificationTest.testCrossFoldValidation" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ClassificationTest_testDependencytree - 2017.04.04 at 10h 48m 57s.xml">
+      <configuration name="ClassificationTest.testDependencytree" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ClassificationTest_testDependencytree - 2017.04.04 at 11h 13m 47s.xml">
+      <configuration name="ClassificationTest.testDependencytree" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ClassificationTest_testDependentClassification - 2017.04.04 at 11h 14m 10s.xml">
       <configuration name="ClassificationTest.testDependentClassification" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ClassificationTest_testDependentClassify - 2017.04.04 at 00h 14m 13s.xml">
-      <configuration name="ClassificationTest.testDependentClassify" configurationId="JUnit" />
+    <history-entry file="ClassificationTest_testIndependentClassification - 2017.04.04 at 10h 57m 05s.xml">
+      <configuration name="ClassificationTest.testIndependentClassification" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ClassificationTest_testDependentClassify - 2017.04.04 at 00h 16m 24s.xml">
-      <configuration name="ClassificationTest.testDependentClassify" configurationId="JUnit" />
+    <history-entry file="ClassificationTest_testIndependentClassification - 2017.04.04 at 11h 11m 17s.xml">
+      <configuration name="ClassificationTest.testIndependentClassification" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ClassificationTest_testDependentClassify - 2017.04.04 at 00h 16m 30s.xml">
-      <configuration name="ClassificationTest.testDependentClassify" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ClassificationTest_testDependentClassify - 2017.04.04 at 00h 16m 31s.xml">
-      <configuration name="ClassificationTest.testDependentClassify" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ClassificationTest_testDependentClassify - 2017.04.04 at 00h 16m 33s.xml">
-      <configuration name="ClassificationTest.testDependentClassify" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ClassificationTest_testDependentClassify - 2017.04.04 at 00h 16m 35s.xml">
-      <configuration name="ClassificationTest.testDependentClassify" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ClassificationTest_testDependentClassify - 2017.04.04 at 00h 20m 28s.xml">
-      <configuration name="ClassificationTest.testDependentClassify" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ClassificationTest_testDependentClassify - 2017.04.04 at 00h 24m 10s.xml">
-      <configuration name="ClassificationTest.testDependentClassify" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ClassificationTest_testIndependentClassification - 2017.04.04 at 00h 24m 24s.xml">
+    <history-entry file="ClassificationTest_testIndependentClassification - 2017.04.04 at 11h 13m 32s.xml">
       <configuration name="ClassificationTest.testIndependentClassification" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54305000" />
+    <option name="totallyTimeSpent" value="59699000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -793,8 +787,8 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32896176" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6945032" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.67978144" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -805,8 +799,8 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.53276956" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.53224045" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -824,7 +818,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="31" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/AIAssign3/Classification.java</url>
+          <line>166</line>
+          <properties />
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="37" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -835,12 +837,9 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/AIAssign3/Datapoint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="61" column="28" lean-forward="false" selection-start-line="61" selection-start-column="28" selection-end-line="61" selection-end-column="28" />
-          <folding>
-            <element signature="e#1455#1456#0" expanded="true" />
-            <element signature="e#1490#1491#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="572">
+          <caret line="26" column="32" lean-forward="true" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -848,11 +847,31 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#12876#12877#0" expanded="true" />
-            <element signature="e#12911#12912#0" expanded="true" />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Test/ClassificationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1430">
+          <caret line="65" column="21" lean-forward="false" selection-start-line="65" selection-start-column="21" selection-end-line="65" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AIAssign3/Datapoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="61" column="28" lean-forward="false" selection-start-line="61" selection-start-column="28" selection-end-line="61" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AIAssign3/Classification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -868,10 +887,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="969">
           <caret line="61" column="27" lean-forward="false" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="27" />
-          <folding>
-            <element signature="e#1455#1456#0" expanded="true" />
-            <element signature="e#1490#1491#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -879,11 +895,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#12876#12877#0" expanded="true" />
-            <element signature="e#12911#12912#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -899,10 +911,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1037">
           <caret line="61" column="27" lean-forward="false" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="27" />
-          <folding>
-            <element signature="e#1455#1456#0" expanded="true" />
-            <element signature="e#1490#1491#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -910,11 +919,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#12876#12877#0" expanded="true" />
-            <element signature="e#12911#12912#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -930,10 +935,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1364">
           <caret line="62" column="95" lean-forward="false" selection-start-line="62" selection-start-column="93" selection-end-line="62" selection-end-column="95" />
-          <folding>
-            <element signature="e#1455#1456#0" expanded="true" />
-            <element signature="e#1490#1491#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -941,11 +943,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#12876#12877#0" expanded="true" />
-            <element signature="e#12911#12912#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -961,10 +959,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1054">
           <caret line="62" column="95" lean-forward="false" selection-start-line="62" selection-start-column="93" selection-end-line="62" selection-end-column="95" />
-          <folding>
-            <element signature="e#1455#1456#0" expanded="true" />
-            <element signature="e#1490#1491#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -972,11 +967,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#12876#12877#0" expanded="true" />
-            <element signature="e#12911#12912#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1002,10 +993,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1020">
           <caret line="62" column="95" lean-forward="false" selection-start-line="62" selection-start-column="93" selection-end-line="62" selection-end-column="95" />
-          <folding>
-            <element signature="e#1455#1456#0" expanded="true" />
-            <element signature="e#1490#1491#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1013,11 +1001,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#12876#12877#0" expanded="true" />
-            <element signature="e#12911#12912#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1043,10 +1027,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="858">
           <caret line="40" column="31" lean-forward="false" selection-start-line="40" selection-start-column="31" selection-end-line="40" selection-end-column="31" />
-          <folding>
-            <element signature="e#1455#1456#0" expanded="true" />
-            <element signature="e#1490#1491#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1054,11 +1035,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#12876#12877#0" expanded="true" />
-            <element signature="e#12911#12912#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1076,10 +1053,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#1455#1456#0" expanded="true" />
-            <element signature="e#1490#1491#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1097,10 +1071,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#1455#1456#0" expanded="true" />
-            <element signature="e#1490#1491#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1126,34 +1097,43 @@
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_25/src.zip!/java/lang/StringBuilder.java" />
-    <entry file="file://$PROJECT_DIR$/src/AIAssign3/Datapoint.java">
+    <entry file="file://$PROJECT_DIR$/src/AIAssign3/Sample.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-230">
-          <caret line="26" column="32" lean-forward="true" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
-          <folding>
-            <element signature="e#1455#1456#0" expanded="true" />
-            <element signature="e#1490#1491#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="132">
+          <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test/ClassificationTest.java">
+    <entry file="file://$PROJECT_DIR$/src/Test/WineClassificationTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="65" column="21" lean-forward="false" selection-start-line="65" selection-start-column="21" selection-end-line="65" selection-end-column="21" />
+        <state relative-caret-position="1509">
+          <caret line="71" column="5" lean-forward="false" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AIAssign3/Datapoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="60" column="42" lean-forward="false" selection-start-line="60" selection-start-column="42" selection-end-line="60" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AIAssign3/Classification.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1456">
-          <caret line="318" column="5" lean-forward="false" selection-start-line="318" selection-start-column="5" selection-end-line="318" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#12876#12877#0" expanded="true" />
-            <element signature="e#12911#12912#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="121">
+          <caret line="166" column="0" lean-forward="false" selection-start-line="166" selection-start-column="0" selection-end-line="166" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Test/ClassificationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="34" column="35" lean-forward="true" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
